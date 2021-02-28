@@ -1,0 +1,32 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    background: transparent;
+}
+.body {
+    width: 1280px;
+    height: 700px;
+    position: relative;
+    font: 30px/40px 'Helvetica Neue';
+    padding-top: 20px;
+}
+ul {
+    list-style: none inside;
+    float: right;
+    clear: right;
+}
+li {
+    text-align: right;
+    padding: 10px;
+    margin-bottom: 20px;
+    color: black;
+    background: #ffddbb;
+    border-left: 15px solid #ffa272;
+}
+#events li {
+    transition: 0.75s ease;
+    position: relative;
+    right: -1280px;
+}

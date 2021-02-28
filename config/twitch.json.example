@@ -1,0 +1,11 @@
+{
+    "wsPort": 16384,
+    "wsUri": "wss://example.com/twitch-ws",
+
+    "userId": 647406467,
+    "userName": "ostilton",
+    "clientId": "appid-123",
+    "clientSecret": "appsecret-456",
+    "eventUri": "https://example.com/twitch-overlay/event.php",
+    "eventSecret": "omgplz-ostilton"
+}
