@@ -25,8 +25,3 @@ li {
     background: #ffddbb;
     border-left: 15px solid #ffa272;
 }
-#events li {
-    transition: 0.75s ease;
-    position: relative;
-    right: -1280px;
-}

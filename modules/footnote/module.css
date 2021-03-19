@@ -1,0 +1,10 @@
+ul#footnotes-list {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+#footnotes-list li {
+    transition: 0.75s ease;
+    position: relative;
+    right: -1280px;
+}

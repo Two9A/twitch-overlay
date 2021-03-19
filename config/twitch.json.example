@@ -7,5 +7,6 @@
     "clientId": "appid-123",
     "clientSecret": "appsecret-456",
     "eventUri": "https://example.com/twitch-overlay/event.php",
-    "eventSecret": "omgplz-ostilton"
+    "eventSecret": "omgplz-ostilton",
+    "noteSecret": "shared-secret"
 }

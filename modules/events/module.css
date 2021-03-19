@@ -1,0 +1,10 @@
+#events-list {
+    position: absolute;
+    top: 180px;
+    right: 0;
+}
+#events-list li {
+    transition: 0.75s ease;
+    position: relative;
+    right: -1280px;
+}

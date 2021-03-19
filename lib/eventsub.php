@@ -18,8 +18,11 @@ class Eventsub {
             case 'webhook_callback_verification':
                 return $json['challenge'];
             case 'notification':
-                \Ratchet\Client\connect('ws://localhost:'.Config::get('wsPort'))->then(function($conn) use($body) {
-                    $conn->send('{"type":"EVENT","content":'.$body.'}');
+                \Ratchet\Client\connect('ws://localhost:'.Config::get('wsPort'))->then(function($conn) use($json) {
+                    $conn->send(json_encode([
+                        'type' => 'EVENT',
+                        'content' => $json,
+                    ], JSON_UNESCAPED_SLASHES));
                     $conn->close();
                 }, function($e) {
                     throw($e);

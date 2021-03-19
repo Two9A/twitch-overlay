@@ -1,8 +1,17 @@
 <?php
 include_once 'bootstrap.php';
 use ostilton\Twitch\Eventsub;
+use ostilton\Twitch\Modules\Footnote;
+use ostilton\Twitch\Config;
 
 $postbody = file_get_contents('php://input');
+if (isset($_SERVER['HTTP_OSTILTON_TWITCH_KEY']) &&
+    $_SERVER['HTTP_OSTILTON_TWITCH_KEY'] === Config::get('noteSecret')
+) {
+    Footnote::send($postbody);
+    return;
+}
+
 $ev = new Eventsub();
 if(!$ev->checkSig(
     $_SERVER['HTTP_TWITCH_EVENTSUB_MESSAGE_SIGNATURE'],
